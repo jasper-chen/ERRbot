@@ -6,15 +6,7 @@ ERRbot stands for Emergency Response Robot, which is the project name for the fi
 
 ## 
 
-From the start, our team mutually agreed to divide tasks by path planning and object recognition.
-
-## Team
-
-Jasper Chen
-Claire Diehl 
-Amanda Sutherland
-
-
+From the start, our team mutually agreed to divide tasks by path planning, map making and object recognition. I worked on the navigation algorithm of the robot, which includes creating waypoints and sending the correct movements to the 
 
 ## To Run
 
@@ -35,3 +27,8 @@ sudo apt-get install ros-hydro-hector-slam
 sudo apt-get install ros-hydro-hector-worldmodel
 
 ```
+## Team
+
+Jasper Chen
+Claire Diehl 
+Amanda Sutherland
