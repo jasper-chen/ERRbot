@@ -56,6 +56,7 @@ class ERRbotMain:
 
 
 	def go_to_goal(self):
+		"""create random waypoint of type Point and Quarternion"""
 		position = Point()
 		orientation = Quaternion()
 
@@ -69,6 +70,7 @@ class ERRbotMain:
 		send_goal_topic(position,orientation)
 
 	def send_goal_topic(self, pos, orientation_quaternion, frame_id='map'):
+		"""send waypoint to move_simple_base node"""
 		pos.z = 0
 		header = Header()
 		header.stamp = rospy.Time.now()
