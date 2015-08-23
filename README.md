@@ -1,9 +1,20 @@
 # ERRbot
-======
 
-Repository for the Final Project in Computational Robotics, a class at Olin College Fall 2014.
+## Description
 
-This repo contains code for a robot which searches and locates known objects in an enclosed space. 
+ERRbot stands for Emergency Response Robot, which is the project name for the final class project for Computational Robotics at Olin College Fall 2014. This code repository contains code for a robot which searches and locates known objects in an enclosed space. The robot is a revamped vaccuum cleaner, which comes equipped with an onboard laser scanner, a camera and a Raspberry Pi to control its movements based on the sensor readings. Our goal was to program the robot to navigate and search through an enclosed space and identify known objects.
+
+## 
+
+From the start, our team mutually agreed to divide tasks by path planning and object recognition.
+
+## Team
+
+Jasper Chen
+Claire Diehl 
+Amanda Sutherland
+
+
 
 ## To Run
 
