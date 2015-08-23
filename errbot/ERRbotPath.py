@@ -24,11 +24,6 @@ diffs = []
 avoid_these_angles = []
 
 class ERRbotPath:
-
-	#def __init__(self,descriptor):
-		#pub = rospy.Publisher('Path', String, queue_size = 10)
-		#rospy.init_node('ERRbotPath', anonymous = True)
-
 	def scan_received(self,msg):
 		""" Processes data from the laser scanner, msg is of type sensor_msgs/LaserScan"""
 		"""sets diff to -100 if broken """
@@ -62,14 +57,8 @@ class ERRbotPath:
 				valid_theta2.append(math.atan2(l1,l2))
 				if abs(l2-l1)< .1:
 					equidistant_angles.append(90-i)
-
-				#print "value of theta1 is %f" % math.atan2(l2,l1)
-				#print "value of l1 is %f" %l1
-				#print "value of l2 is %f" %l2
-				#print "value of theta2 is %f" % math.atan2(l1,l2)
 		diff = sum(valid_theta2)-sum(valid_theta1)
 		diffs.append(diff)
-		#print equidistant_angles
 
 		if len(equidistant_angles) > 20:
 			parallel = True
@@ -80,9 +69,6 @@ class ERRbotPath:
 			no_valid_angles = True
 		else:
 			no_valid_angles = False
-
-		#print valid_theta2
-		#print valid_theta1
 
 		print "value of diff is %f" % diff
 
@@ -158,10 +144,8 @@ class ERRbotPath:
 					velocity_msg = Twist(Vector3(0.05,0.0,0.0),Vector3(0.0,0.0,0.3))
 				else:
 					if len(diffs) > 1 and diffs[-2] != 0:
-						print 'pd'
 						velocity_msg = Twist(Vector3(0.05,0.0,0.0),Vector3(0.0,0.0,0.02*diff-.01*diffs[-1]/diffs[-2]))
 					else:
-						print 'p'
 						velocity_msg = Twist(Vector3(0.05,0.0,0.0),Vector3(0.0,0.0,0.02*diff))
 
 			pub.publish(velocity_msg)
@@ -186,11 +170,6 @@ class ERRbotPath:
 		
 if __name__ == '__main__':
 	try:
-		#int = linear, anglular
-		#rospy.loginfo(int)
-		#pub.publish(int)
-		#r.sleep()
-
 		# Initializing node, path_planning
 		rospy.init_node('Path', anonymous=True)
 		pub = rospy.Publisher('Path', Twist, queue_size=10)
