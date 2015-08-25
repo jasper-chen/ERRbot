@@ -8,6 +8,8 @@ ERRbot stands for Emergency Response Robot, which is the project name for the fi
 
 From the start, our team mutually agreed to divide tasks by path planning, map making and object recognition. I worked on the navigation algorithm of the robot, which includes creating waypoints and paths to follow.
 
+![alt tag](https://github.com/jasper-chen/ERRbot/navigation.png)
+
 ## To Run
 
 ```
