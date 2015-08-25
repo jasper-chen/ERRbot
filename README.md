@@ -33,6 +33,6 @@ sudo apt-get install ros-hydro-hector-worldmodel
 ```
 ## Team
 
-Jasper Chen
-Claire Diehl 
-Amanda Sutherland
+* Jasper Chen
+* Claire Diehl 
+* Amanda Sutherland
