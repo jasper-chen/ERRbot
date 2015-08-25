@@ -10,7 +10,7 @@ From the start, our team mutually agreed to divide tasks by path planning, map m
 
 ![alt tag](https://github.com/jasper-chen/ERRbot/blob/master/navigation.png)
 
-The red line indicates a path determined by the navigation algorithm I wrote.
+While the robot is on its mission, the navigation algorithm creates waypoints and paths to reach those waypoints. The red line shows the robot's intended path. Getting the robot to follow the path required troubleshooting in the C++ layer of ROS's navigation packages.
 
 ## To Run
 
