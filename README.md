@@ -10,6 +10,8 @@ From the start, our team mutually agreed to divide tasks by path planning, map m
 
 ![alt tag](https://github.com/jasper-chen/ERRbot/blob/master/navigation.png)
 
+The red line indicates a path determined by the navigation algorithm I wrote.
+
 ## To Run
 
 ```
